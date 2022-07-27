@@ -25,6 +25,6 @@ app.use('*', (err, req, res, next) => {
 // { alter: true }
 sequelize.sync()
     .then(() => {
-        app.listen(PORT, err => err ? console.log(err) : console.log(`Listen ${PORT} ...`))
+        app.listen(process.env.PORT, err => err ? console.log(err) : console.log(`Listen ${PORT} ...`))
     })
     .catch(console.log)
