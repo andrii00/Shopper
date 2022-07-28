@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json())
 const cors = require('cors');
 app.use(cors());
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended:true}))
 app.use('/api', apiRouter)
 
 require('dotenv').config({ path: path.resolve(__dirname, '.env') })
